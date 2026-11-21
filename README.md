@@ -37,12 +37,19 @@ npm run typecheck
 
 - `src/pages/` — Home, Approach, Care, Practitioner, Library, Article, Enquiry, NotFound
 - `src/data/` — brand, content and sample data (all placeholder-marked)
+- `src/lib/pageMeta.ts` — single source of truth for per-page title/description
+- `src/entry-server.tsx` + `scripts/prerender.mjs` — build-time prerendering
 - `public/images/` — demo imagery
 - `public/robots.txt`, `public/sitemap.xml` — SEO files pointing at the live URL
 
 ## Notes
 
-- Asset paths are relative (`base: "./"` in `vite.config.ts`) so the build works
-  under the `/sample-ayurveda/` project subpath.
-- The deploy workflow copies `index.html` to `404.html` so unknown paths load
-  the app instead of a bare Pages error page.
+- Every route is **prerendered to its own static `index.html`** at build time
+  (`dist/care/index.html`, …), so crawlers and fetch tools that never run
+  JavaScript still see the full page content. The client hydrates the same
+  markup with `BrowserRouter`.
+- Unknown paths serve the prerendered `404.html` (the NotFound page) — GitHub
+  Pages does this automatically.
+- Production assets use the absolute base `/sample-ayurveda/` (see
+  `vite.config.ts`) to match the GitHub Pages project-site path; dev serves
+  from `/`.

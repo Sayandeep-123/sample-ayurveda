@@ -2,23 +2,22 @@
 <!--
   Sitemap for the Root & Reason concept demonstration, deployed at
   https://sayandeep-123.github.io/sample-ayurveda/
-  Routes are hash-based (#/...) because the app is a single-page
-  application served as static files.
+  Every route is prerendered to a real static page at build time.
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/#/</loc><changefreq>monthly</changefreq><priority>1.0</priority><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/#/approach</loc><changefreq>yearly</changefreq><priority>0.9</priority><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/#/care</loc><changefreq>yearly</changefreq><priority>0.8</priority><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/#/practitioner</loc><changefreq>yearly</changefreq><priority>0.7</priority><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/#/library</loc><changefreq>weekly</changefreq><priority>0.9</priority><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/#/library/when-tradition-meets-a-blood-test</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/#/library/what-prakriti-actually-means</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/#/library/agni-why-ayurveda-obsesses-over-digestion</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/#/library/dinacharya-the-case-for-a-boring-morning</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/#/library/ritucharya-living-with-the-seasons</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/#/library/herbs-what-we-actually-know</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/#/library/sleep-is-a-treatment-nidra</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/#/library/panchakarma-honestly</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/#/library/reading-your-tongue-self-observation</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2026-11-21</lastmod></url>
-  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/#/enquiry</loc><changefreq>yearly</changefreq><priority>0.8</priority><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/</loc><changefreq>monthly</changefreq><priority>1.0</priority><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/approach/</loc><changefreq>yearly</changefreq><priority>0.9</priority><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/care/</loc><changefreq>yearly</changefreq><priority>0.8</priority><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/practitioner/</loc><changefreq>yearly</changefreq><priority>0.7</priority><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/library/</loc><changefreq>weekly</changefreq><priority>0.9</priority><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/library/when-tradition-meets-a-blood-test/</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/library/what-prakriti-actually-means/</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/library/agni-why-ayurveda-obsesses-over-digestion/</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/library/dinacharya-the-case-for-a-boring-morning/</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/library/ritucharya-living-with-the-seasons/</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/library/herbs-what-we-actually-know/</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/library/sleep-is-a-treatment-nidra/</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/library/panchakarma-honestly/</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/library/reading-your-tongue-self-observation/</loc><changefreq>monthly</changefreq><priority>0.6</priority><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://sayandeep-123.github.io/sample-ayurveda/enquiry/</loc><changefreq>yearly</changefreq><priority>0.8</priority><lastmod>2026-11-21</lastmod></url>
 </urlset>

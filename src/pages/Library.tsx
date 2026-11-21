@@ -10,11 +10,7 @@ import { usePageMeta } from "@/lib/usePageMeta";
 type Filter = "All" | Category;
 
 export default function Library() {
-  usePageMeta(
-    "Knowledge Hub — Root & Reason | Concept",
-    "Original educational articles on Ayurveda, digestion, daily rhythm, sleep, herbs and evidence — organised, searchable and written in plain language. Educational only.",
-    "/library"
-  );
+  usePageMeta("/library");
 
   const [params, setParams] = useSearchParams();
   const initialCat = (params.get("cat") as Filter | null) ?? "All";

@@ -46,11 +46,7 @@ export default function Article() {
   const { slug = "" } = useParams();
   const article = getArticle(slug);
 
-  usePageMeta(
-    article ? `${article.title} — Root & Reason Knowledge Hub` : "Article not found — Root & Reason",
-    article ? article.excerpt : "The article you were looking for isn't here.",
-    `/library/${slug}`
-  );
+  usePageMeta(`/library/${slug}`);
 
   /* reading progress */
   const [progress, setProgress] = useState(0);

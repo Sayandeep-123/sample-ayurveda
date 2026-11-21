@@ -9,13 +9,16 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // https://vite.dev/config/
-export default defineConfig({
-  // Relative base so the build works under a subpath (e.g. GitHub Pages project sites)
-  base: "./",
-  plugins: [react(), tailwindcss(), viteSingleFile()],
+// The site deploys to a GitHub Pages *project* site, so production assets
+// live under /sample-ayurveda/. Dev serves from "/".
+export default defineConfig(({ mode, isSsrBuild }) => ({
+  base: mode === "development" ? "/" : "/sample-ayurveda/",
+  // singlefile inlines JS/CSS into index.html for the client build only —
+  // the SSR build (src/entry-server.tsx) just needs plain modules.
+  plugins: [react(), tailwindcss(), ...(isSsrBuild ? [] : [viteSingleFile()])],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
     },
   },
-});
+}));

@@ -15,11 +15,7 @@ const APPROVAL_CHECKLIST = [
 ];
 
 export default function Practitioner() {
-  usePageMeta(
-    "The Practitioner — sample profile layout | Root & Reason concept",
-    "A sample practitioner profile layout for the fictional Root & Reason concept: photo, qualification, experience and interest slots shown as clearly labelled placeholders.",
-    "/practitioner"
-  );
+  usePageMeta("/practitioner");
 
   return (
     <>
