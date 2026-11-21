@@ -82,7 +82,7 @@ export default function Home() {
             <Reveal delay={200} className="relative mx-auto max-w-md lg:ml-auto">
               <div className="arch relative overflow-hidden border border-olive/25 shadow-2xl shadow-moss/15">
                 <img
-                  src="/images/hero-pulse.jpg"
+                  src="images/hero-pulse.jpg"
                   alt="A practitioner gently reading a patient's pulse across a wooden table in warm window light."
                   className="h-[420px] w-full animate-kenburns object-cover sm:h-[520px]"
                   fetchPriority="high"
