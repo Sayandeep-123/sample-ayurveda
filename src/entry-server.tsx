@@ -6,8 +6,7 @@ import { MemoryRouter } from "react-router-dom";
 import App from "./App";
 import { getPageMeta, type PageMeta } from "./lib/pageMeta";
 import { ARTICLES } from "./data/articles";
-
-const BASE = (import.meta.env.BASE_URL || "/").replace(/\/$/, "");
+import { SITE_BASE, SITE_BASENAME } from "./lib/siteBase";
 
 /** Every route prerendered to its own index.html at build time. */
 export const PRERENDER_ROUTES: string[] = [
@@ -24,9 +23,9 @@ export const PRERENDER_ROUTES: string[] = [
     (e.g. "/care"); MemoryRouter gets the full path + basename so Link hrefs
     match the hydrated client exactly. */
 export function render(path: string): string {
-  const fullPath = path === "/" ? `${BASE}/` : `${BASE}${path}`;
+  const fullPath = path === "/" ? SITE_BASE : `${SITE_BASENAME}${path}`;
   return renderToString(
-    <MemoryRouter basename={BASE} initialEntries={[fullPath]}>
+    <MemoryRouter basename={SITE_BASENAME} initialEntries={[fullPath]}>
       <App />
     </MemoryRouter>
   );

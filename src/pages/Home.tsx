@@ -9,6 +9,7 @@ import Reveal from "@/components/Reveal";
 import { ButtonLink, Eyebrow, Marquee, PhotoPlaceholder, PulseLine, RotatingBadge } from "@/components/bits";
 import { CARE_ICONS, PRINCIPLE_ICONS, IconArrow } from "@/components/Icons";
 import { usePageMeta } from "@/lib/usePageMeta";
+import { SITE_BASE } from "@/lib/siteBase";
 
 export default function Home() {
   usePageMeta("/");
@@ -78,7 +79,7 @@ export default function Home() {
             <Reveal delay={200} className="relative mx-auto max-w-md lg:ml-auto">
               <div className="arch relative overflow-hidden border border-olive/25 shadow-2xl shadow-moss/15">
                 <img
-                  src={`${import.meta.env.BASE_URL}images/hero-pulse.jpg`}
+                  src={`${SITE_BASE}images/hero-pulse.jpg`}
                   alt="A practitioner gently reading a patient's pulse across a wooden table in warm window light."
                   className="h-[420px] w-full animate-kenburns object-cover sm:h-[520px]"
                   fetchPriority="high"

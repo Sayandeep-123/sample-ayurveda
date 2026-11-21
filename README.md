@@ -50,6 +50,7 @@ npm run typecheck
   markup with `BrowserRouter`.
 - Unknown paths serve the prerendered `404.html` (the NotFound page) — GitHub
   Pages does this automatically.
-- Production assets use the absolute base `/sample-ayurveda/` (see
-  `vite.config.ts`) to match the GitHub Pages project-site path; dev serves
-  from `/`.
+- Production assets use the absolute base `/sample-ayurveda/` — injected into
+  app code as `__SITE_BASE__` (see `src/lib/siteBase.ts`) because
+  `vite-plugin-singlefile` forcibly rewrites Vite's `base` to `"./"`, which
+  breaks basename-based routing if the app trusts `import.meta.env.BASE_URL`.

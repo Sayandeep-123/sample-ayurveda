@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { getPageMeta } from "./pageMeta";
+import { SITE_BASE, SITE_ORIGIN } from "./siteBase";
 
 /**
  * Per-route head management on the client: title, description, canonical.
@@ -27,9 +28,8 @@ export function usePageMeta(path: string) {
       canonical.rel = "canonical";
       document.head.appendChild(canonical);
     }
-    const base = import.meta.env.BASE_URL; // "/" in dev, "/sample-ayurveda/" in prod
     const rel = path === "/" ? "" : `${path.replace(/^\//, "")}/`;
-    canonical.href = `${window.location.origin}${base}${rel}`;
+    canonical.href = `${SITE_ORIGIN}${SITE_BASE}${rel}`;
 
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   }, [title, description, path]);

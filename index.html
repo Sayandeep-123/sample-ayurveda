@@ -31,6 +31,25 @@
     />
     <meta name="twitter:image" content="https://sayandeep-123.github.io/sample-ayurveda/images/hero-pulse.jpg" />
     <link rel="canonical" href="https://sayandeep-123.github.io/sample-ayurveda/" />
+    <script>
+      /* Reveal failsafe: page sections start hidden (opacity 0) and are meant
+         to be revealed by the app's IntersectionObserver. If the app's JS is
+         blocked, crashes, or stalls, content must still become visible. */
+      document.documentElement.classList.add("js");
+      setTimeout(function () {
+        var stuck = document.querySelectorAll(".reveal:not(.is-in)");
+        if (!stuck.length) return;
+        var healthy = document.querySelectorAll(".reveal.is-in").length > 0;
+        for (var i = 0; i < stuck.length; i++) {
+          var r = stuck[i].getBoundingClientRect();
+          /* healthy app: reveal what's in view (no-op normally);
+             dead app: reveal everything so the page is never blank */
+          if (!healthy || (r.top < window.innerHeight + 100 && r.bottom > -100)) {
+            stuck[i].classList.add("is-in");
+          }
+        }
+      }, 2500);
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
