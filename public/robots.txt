@@ -1,6 +1,6 @@
 # robots.txt — Root & Reason (concept demonstration)
-# Fictional brand; domain below is illustrative only.
+# Fictional brand; routes are hash-based (single-page app on GitHub Pages).
 User-agent: *
 Allow: /
 
-Sitemap: https://rootandreason.example/sitemap.xml
+Sitemap: https://sayandeep-123.github.io/sample-ayurveda/sitemap.xml

@@ -32,6 +32,10 @@ jobs:
       - name: Build
         run: npm run build
 
+      # GitHub Pages serves 404.html for unknown paths — serve the app there too
+      - name: Add 404 fallback
+        run: cp dist/index.html dist/404.html
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
