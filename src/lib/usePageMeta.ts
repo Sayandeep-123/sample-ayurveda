@@ -1,11 +1,15 @@
 import { useEffect } from "react";
+import { getPageMeta } from "./pageMeta";
 
 /**
- * Per-route SEO metadata: title, description, canonical (hash-based URLs).
- * A real deployment would server-render these; for the concept SPA this keeps
- * the document head correct for each view.
+ * Per-route head management on the client: title, description, canonical.
+ * The build-time prerender script bakes the same values (from getPageMeta)
+ * into each static page's HTML, so crawlers that never run JavaScript still
+ * see the right head for every route.
  */
-export function usePageMeta(title: string, description: string, path: string) {
+export function usePageMeta(path: string) {
+  const { title, description } = getPageMeta(path);
+
   useEffect(() => {
     document.title = title;
 
@@ -23,7 +27,9 @@ export function usePageMeta(title: string, description: string, path: string) {
       canonical.rel = "canonical";
       document.head.appendChild(canonical);
     }
-    canonical.href = `${window.location.origin}${window.location.pathname}#${path}`;
+    const base = import.meta.env.BASE_URL; // "/" in dev, "/sample-ayurveda/" in prod
+    const rel = path === "/" ? "" : `${path.replace(/^\//, "")}/`;
+    canonical.href = `${window.location.origin}${base}${rel}`;
 
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   }, [title, description, path]);

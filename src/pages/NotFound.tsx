@@ -4,11 +4,7 @@ import { IconArrow } from "@/components/Icons";
 import { usePageMeta } from "@/lib/usePageMeta";
 
 export default function NotFound() {
-  usePageMeta(
-    "Page not found — Root & Reason",
-    "The page you were looking for isn't here.",
-    "/404"
-  );
+  usePageMeta("/404");
 
   return (
     <section className="mx-auto flex min-h-[78vh] max-w-3xl flex-col items-center justify-center px-5 pt-28 text-center">

@@ -11,11 +11,7 @@ import { CARE_ICONS, PRINCIPLE_ICONS, IconArrow } from "@/components/Icons";
 import { usePageMeta } from "@/lib/usePageMeta";
 
 export default function Home() {
-  usePageMeta(
-    "Root & Reason — Integrative Ayurveda, Explained | Concept",
-    "A fictional integrative health practice concept: Ayurvedic observation and modern evidence at the same consultation table. Longer consults, plain-language plans, honest education.",
-    "/"
-  );
+  usePageMeta("/");
 
   const featured = getArticle(FEATURED_SLUG)!;
   const recent = ARTICLES.filter((a) => a.slug !== FEATURED_SLUG).slice(0, 3);
@@ -82,7 +78,7 @@ export default function Home() {
             <Reveal delay={200} className="relative mx-auto max-w-md lg:ml-auto">
               <div className="arch relative overflow-hidden border border-olive/25 shadow-2xl shadow-moss/15">
                 <img
-                  src="images/hero-pulse.jpg"
+                  src={`${import.meta.env.BASE_URL}images/hero-pulse.jpg`}
                   alt="A practitioner gently reading a patient's pulse across a wooden table in warm window light."
                   className="h-[420px] w-full animate-kenburns object-cover sm:h-[520px]"
                   fetchPriority="high"

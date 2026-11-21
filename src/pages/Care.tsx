@@ -8,11 +8,7 @@ import { CARE_ICONS, IconArrow } from "@/components/Icons";
 import { usePageMeta } from "@/lib/usePageMeta";
 
 export default function Care() {
-  usePageMeta(
-    "Areas of Care — Root & Reason | Concept",
-    "Six broad areas of supportive, integrative care — digestive health, stress and sleep, women's cycle rhythm, skin, metabolic health, joints — each with honest boundaries.",
-    "/care"
-  );
+  usePageMeta("/care");
 
   return (
     <>

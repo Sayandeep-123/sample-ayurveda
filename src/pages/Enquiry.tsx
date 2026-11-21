@@ -71,11 +71,7 @@ function FaqItem({ q, a, i }: { q: string; a: string; i: number }) {
 }
 
 export default function Enquiry() {
-  usePageMeta(
-    "Begin an Enquiry — Root & Reason | Concept",
-    "Enquire about a first consultation with the fictional Root & Reason practice. Fictional contact details, clearly labelled — a concept demonstration with a validated sample form.",
-    "/enquiry"
-  );
+  usePageMeta("/enquiry");
 
   const [form, setForm] = useState<FormState>(INITIAL);
   const [errors, setErrors] = useState<Errors>({});

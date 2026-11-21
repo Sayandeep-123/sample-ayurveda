@@ -39,11 +39,7 @@ const FIRST_VISIT_STEPS = [
 ];
 
 export default function Approach() {
-  usePageMeta(
-    "Our Approach — Root & Reason | Concept",
-    "How the fictional Root & Reason practice approaches healthcare: longer consultations, pattern-based assessment, tradition examined against evidence, rhythm-first plans, and real continuity.",
-    "/approach"
-  );
+  usePageMeta("/approach");
 
   const [active, setActive] = useState(SECTIONS[0].id);
 
