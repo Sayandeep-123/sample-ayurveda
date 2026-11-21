@@ -1,0 +1,6 @@
+# robots.txt — Root & Reason (concept demonstration)
+# Fictional brand; domain below is illustrative only.
+User-agent: *
+Allow: /
+
+Sitemap: https://rootandreason.example/sitemap.xml
